@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domains Registration</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <!-- Logo -->
+      <div class="logo">
+        <span>◎</span> DOMAINS
+      </div>
+
+      <!-- Menu -->
+      <nav class="menu">
+        <a href="#" class="menu-item">Abi</a>
+        <a href="#" class="menu-item">Blogi</a>
+        <a href="#" class="menu-item">Klienditugi</a>
+        <a href="#" class="menu-item">Posti</a>
+      </nav>
+
+      <!-- Login and language -->
+      <div class="right-section">
+        <div class="login">
+          <span>Logi sisse</span>
+          <span class="icon">👤</span>
+        </div>
+        <div class="language-switch">
+          <span class="lang-option active">est</span>
+          <span class="lang-option">en</span>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <main class="container">
+    <div class="steps-wrapper">
+      <!-- First step (active) -->
+      <div class="circle-container group1 active">
+        <div class="circle active-circle">
+          <span class="circle-number1">1</span>
+        </div>
+        <div class="text-group">
+          <p class="title">OTSI</p>
+          <p class="subtitle">Vali sobivad domeeninimed</p>
+        </div>
+      </div>
+      
+      <!-- Second step -->
+      <div class="circle-container group2 step-clickable" data-page="andmed.html">
+        <div class="circle">
+          <span class="circle-number2">2</span>
+        </div>
+        <div class="text-group">
+          <p class="title">ANDMED</p>
+          <p class="subtitle">Sisesta andmed</p>
+        </div>
+      </div>
+      
+      <!-- Third step -->
+      <div class="circle-container group3 step-clickable" data-page="maksa.html">
+        <div class="circle">
+          <span class="circle-number3">3</span>
+        </div>
+        <div class="text-group">
+          <p class="title">MAKSA</p>
+          <p class="subtitle">ja hakka kasutama!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="search">
+      <input class="domain-input" placeholder="Sisesta domeeninimi">
+      <select class="form-select" id="extensionSelect" aria-label="Domain extension select">
+        <option value="Kõik">Kõik</option>
+        <option value=".com">.com</option>
+        <option value=".net">.net</option>
+        <option value=".org">.org</option>
+        <option value=".ee">.ee</option>
+      </select>
+      <button class="button">Otsi</button>
+    </div>
+
+    <!-- Results container -->
+    <div class="result"></div>
+
+    <!-- Navigation button -->
+    <div class="button-container">
+      <a class="button1" href="andmed.html" role="button1">Edasi</a>
+    </div>
+  </main>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
