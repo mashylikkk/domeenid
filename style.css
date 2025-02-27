@@ -1,0 +1,609 @@
+/* Core styles with Bootstrap integration */
+body {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* Brand and Navigation */
+.logo {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.logo span {
+  color: #F19EDC;
+  margin-right: 10px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  margin: 20px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 600px;
+  padding: 10px 20px;
+  border: 1px solid white;
+  border-radius: 30px;
+  margin: 0 auto;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 15px;
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+  background-color: #F19EDC;
+  border-radius: 25px;
+  color: beige;
+}
+
+/* Authentication and Language Controls */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+}
+
+.icon {
+  color: #F19EDC;
+}
+
+.language-switch {
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 25px;
+  padding: 5px 10px;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.lang-option {
+  font-size: 0.9rem;
+  padding: 2px 10px;
+  border-radius: 15px;
+}
+
+.lang-option.active {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+/* Stepper Component */
+.steps-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30px;
+  margin-bottom: 40px;
+  align-items: center;
+}
+
+.circle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.circle-container:hover {
+  transform: scale(1.05);
+}
+
+.circle-container .circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: white;
+  margin: 3rem 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.circle-container:hover .circle:not(.active-circle) {
+  background-color: #f8c7e8;
+}
+
+.circle-number1, .circle-number2, .circle-number3 {
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+}
+
+.active-circle {
+  background-color: #F19EDC !important;
+}
+
+.active-circle .circle-number1,
+.active-circle .circle-number2,
+.active-circle .circle-number3 {
+  color: white;
+}
+
+.circle-container .text-group {
+  text-align: center;
+}
+
+.circle-container .text-group .title {
+  font-family: 'Unbounded', sans-serif;
+  margin: 0;
+  font-size: 36px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.circle-container:hover .text-group .title {
+  color: #F19EDC;
+}
+
+.circle-container .text-group .subtitle {
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-size: 23px;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.circle-container:hover .text-group .subtitle {
+  color: #F19EDC;
+}
+
+/* Search Interface */
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1056px;
+  height: 79px;
+  margin: 2rem auto;
+  background-color: white;
+  border-radius: 16px;
+  padding: 0 1rem;
+}
+
+.domain-input {
+  flex: 1;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+}
+
+#extensionSelect {
+  font-size: 20px;
+  border: none;
+  outline: none;
+  margin: 1rem;
+  padding: 0.5rem;
+  background-color: white;
+  color: black;
+  width: auto;
+  box-shadow: none;
+  padding-right: 1.5rem !important;
+  background-position: right 0.5rem center;
+}
+
+/* Button Components */
+.button, .button1, .btn-back, .btn-next, .download-button {
+  background-color: #F19EDC;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-family: 'Unbounded', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover, .button1:hover, .btn-back:hover, .btn-next:hover, .download-button:hover {
+  background-color: #f19edcb7;
+}
+
+.button {
+  padding: 12px 25px;
+  font-size: 24px;
+}
+
+.search .button {
+  margin-left: 1rem;
+}
+
+.button1 {
+  border-radius: 16px;
+  font-size: 30px;
+  padding: 0.5rem 1rem;
+  margin: 2rem auto;
+  display: block;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 30px;
+  display: none;
+}
+
+/* Domain Search Results */
+.result {
+  max-width: 1056px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.domain-result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  color: black;
+}
+
+.domain-result:last-child {
+  border-bottom: none;
+}
+
+.domain-name {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+}
+
+.duration-selector {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.add-button {
+  background-color: #F19EDC;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 15px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.add-button.selected {
+  background-color: #aaa;
+}
+
+/* Registration Form */
+.registration-section {
+  margin-top: 40px;
+}
+
+.login-options {
+  margin: 20px 0;
+}
+
+.login-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.login-link:hover {
+  color: #F19EDC;
+}
+
+.arrow {
+  margin-left: 5px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: #F19EDC;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.form-column {
+  flex: 1;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}
+
+.form-input.pink {
+  background-color: #F19EDC;
+  opacity: 0.7;
+}
+
+.phone-input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.phone-code {
+  width: 15%;
+}
+
+.phone-number {
+  flex: 1;
+}
+
+/* Pricing Summary */
+.pricing-column {
+  flex: 0.4;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.pricing-title {
+  font-size: 2rem;
+  color: #F19EDC;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.pricing-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.pricing-domains {
+  margin-bottom: 15px;
+}
+
+.domain-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.domain-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.domain-duration {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.remove-domain {
+  color: #F19EDC;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Navigation Buttons */
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.btn {
+  padding: 12px 30px;
+  border-radius: 25px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Thank You Page */
+.thank-you-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 60px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.thank-you-title {
+  font-size: 60px;
+  color: #F19EDC;
+  font-family: 'Unbounded', sans-serif;
+  margin-bottom: 40px;
+}
+
+.confirmation-text, .email-text, .download-link {
+  font-size: 24px;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.download-button {
+  padding: 12px 30px;
+  font-size: 20px;
+  margin-top: 40px;
+  font-weight: bold;
+  border-radius: 25px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    gap: 15px;
+    margin: 10px;
+    padding: 5px;
+  }
+  
+  .menu {
+    flex-direction: column;
+    width: 90%;
+    gap: 10px;
+    padding: 15px 0;
+  }
+  
+  .menu a {
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+  }
+  
+  .right-section {
+    margin-top: 10px;
+  }
+
+  .steps-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .circle-container {
+    flex: 0 0 auto;
+  }
+  
+  .circle-container .circle {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .circle-number1, .circle-number2, .circle-number3 {
+    font-size: 30px;
+  }
+  
+  .circle-container .text-group .subtitle {
+    display: none;
+  }
+  
+  .circle-container .text-group .title {
+    font-size: 20px;
+  }
+
+  .form-container {
+    flex-direction: column;
+  }
+  
+  .search {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+  
+  .domain-input, #extensionSelect, .search .button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .top-bar {
+    gap: 10px;
+    margin: 5px;
+    padding: 3px;
+  }
+
+  .menu {
+    width: 100%;
+    gap: 5px;
+    padding: 10px 0;
+  }
+
+  .menu a {
+    font-size: 14px;
+    padding: 6px 0;
+  }
+
+  .right-section {
+    margin-top: 5px;
+  }
+
+  .steps-wrapper {
+    gap: 10px;
+  }
+
+  .circle-container .circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .circle-number1, .circle-number2, .circle-number3 {
+    font-size: 20px;
+  }
+
+  .circle-container .text-group .title {
+    font-size: 16px;
+  }
+
+  .form-container {
+    padding: 10px;
+  }
+
+  .search {
+    padding: 10px;
+  }
+
+  .domain-input, #extensionSelect, .search .button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
